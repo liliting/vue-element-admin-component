@@ -9,7 +9,7 @@
         <el-input placeholder="密碼"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button>登陸</el-button>
+        <el-button class="btn" type="primary">登陸</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -32,10 +32,15 @@ body{
   background: #f1f1f1;
 }
 .login-container{
-  width: 500px;
+  width: 400px;
   margin: 10% auto;
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 20px 40px;
+}
+.btn{
+  display: block;
+  width: 100%;
+
 }
 </style>
