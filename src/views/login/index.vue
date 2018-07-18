@@ -2,6 +2,24 @@
   <div class="login-container">
     <el-form class="login-form" ref="loginForm">
       <h2>系統登陸</h2>
+      <span>第三方登录</span>
+      <el-row type="flex" justify="space-around">
+          <el-col :span="4">
+            <a href="">
+              <fa-icon icon="coffee"></fa-icon>
+            </a>
+          </el-col>
+          <el-col :span="4">
+            <a href="">
+              <fa-icon icon="qq"></fa-icon>
+            </a>
+          </el-col>
+          <el-col :span="4">
+            <a href="">
+              <fa-icon icon="weixin"></fa-icon>
+            </a>
+          </el-col>
+      </el-row>
       <el-form-item>
         <el-input placeholder="用戶名"></el-input>
       </el-form-item>

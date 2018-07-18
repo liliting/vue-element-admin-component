@@ -9,6 +9,13 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 import 'normalize.css'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faCoffee)
+Vue.component('fa-icon', FontAwesomeIcon)
+
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
