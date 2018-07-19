@@ -6,17 +6,17 @@
       <el-row type="flex" justify="space-around">
           <el-col :span="4">
             <a href="">
-              <fa-icon icon="coffee"></fa-icon>
+              <fa-icon :icon="['fab','weibo']" style="color: #F6D259" size="6x"></fa-icon>
             </a>
           </el-col>
           <el-col :span="4">
             <a href="">
-              <fa-icon icon="qq"></fa-icon>
+              <fa-icon :icon="['fab', 'qq']" style="color: #1CC5EC;" size="6x"></fa-icon>
             </a>
           </el-col>
           <el-col :span="4">
             <a href="">
-              <fa-icon icon="weixin"></fa-icon>
+              <fa-icon :icon="['fab', 'weixin']" style="color: #14D324;" size="6x"></fa-icon>
             </a>
           </el-col>
       </el-row>
