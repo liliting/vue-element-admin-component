@@ -1,13 +1,13 @@
 <template>
-  <div></div>
+  <div class="left"></div>
 </template>
 
 <script>
 export default {
-  name: 'header',
+  name: 'sidebar',
   data () {
     return {
-
+      
     }
   }
 }
