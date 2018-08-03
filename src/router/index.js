@@ -7,15 +7,108 @@ import Layout from '@/views/layout/Index'
 Vue.use(Router)
 
 export const constantRouterMap = [
+  {path: '/login', name: 'login', component: Login, hidden: true},
+  {path: '/', name: 'layout', component: Layout, hidden: true, redirect: '/member'},
   {
-    path: '/login',
-    name: 'login',
-    component: Login
+    path: '/member',
+    component: Layout,
+    name: '会员信息',
+    hidden: false,
+    redirect: '/member/index',
+    meta: {
+      title: '会员信息',
+      icon: ['fas', 'users-cog']
+    },
+    children: [
+      {
+        path: 'index',
+        component: Login,
+        meta: {
+          title: '会员信息列表',
+          role: [ 'admin' ]
+        }
+      }
+    ]
   },
   {
-    path: '/',
-    name: 'layout',
-    component: Layout
+    path: '/integral',
+    component: Layout,
+    name: '积分规则管理',
+    hidden: false,
+    meta: {
+      title: '积分规则管理',
+      icon: 'bullhorn',
+      role: ['admin']
+    },
+    children: [
+      {
+        path: 'index',
+        component: Login,
+        name: '积分增长规则',
+        meta: {
+          title: '积分增长规则',
+          role: ['admin']
+        },
+        children: [
+          {
+            path: 'index',
+            component: Login,
+            meta: {
+              title: '会员信息列表',
+              role: [ 'admin' ]
+            }
+          },
+          {
+            path: 'ss',
+            component: Login,
+            meta: {
+              title: '会员信息列表',
+              role: [ 'admin' ]
+            }
+          }
+        ]
+      },
+      {
+        path: 'exchange',
+        component: Login,
+        name: '积分兑换规则',
+        meta: {
+          title: '积分兑换规则',
+          role: ['admin']
+        }
+      }
+    ]
+  },
+  {
+    path: '/integralGift',
+    component: Layout,
+    name: '积分赠送管理',
+    hidden: false,
+    meta: {
+      title: '积分赠送管理',
+      icon: ['fas', 'gift'],
+      role: ['admin']
+    },
+    children: [
+      {
+        path: 'index',
+        component: Login,
+        name: '积分赠送申请',
+        meta: {
+          title: '积分赠送申请',
+          role: ['admin']
+        }
+      },
+      {
+        path: 'auditing',
+        component: Login,
+        name: '积分赠送审核',
+        meta: {
+          title: '积分赠送审核',
+          role: ['admin']
+        }
+      }
+    ]
   }
 ]
 
@@ -30,34 +123,51 @@ export const asyncRouter = [
     path: '/member',
     component: Layout,
     name: '会员信息',
-    icon: 'user',
-    meta: { role: ['admin'] },
+    hidden: false,
+    meta: {
+      title: '会员信息',
+      icon: ['fas', 'users-cog']
+    },
+    redirect: '/member/index',
     children: [
-      // {
-      //   path: 'index',
-      //   component: login,
-      //   name: '会员信息列表',
-      // }
+      {
+        path: 'index',
+        component: Login,
+        meta: {
+          title: '会员信息列表',
+          role: [ 'admin' ]
+        }
+      }
     ]
   },
   {
     path: '/integral',
     component: Layout,
     name: '积分规则管理',
-    icon: 'fenshu',
-    meta: { role: ['admin'] },
+    // icon: 'bullhorn',
+    meta: {
+      title: '积分规则管理',
+      icon: 'bullhorn',
+      role: ['admin']
+    },
     children: [
       {
         path: 'index',
         component: Login,
         name: '积分增长规则',
-        meta: { role: ['admin'] }
+        meta: {
+          title: '积分增长规则',
+          role: ['admin']
+        }
       },
       {
-        path: 'duihuan',
+        path: 'exchange',
         component: Login,
         name: '积分兑换规则',
-        meta: { role: ['admin'] }
+        meta: {
+          title: '积分兑换规则',
+          role: ['admin']
+        }
       }
     ]
   },
@@ -65,20 +175,30 @@ export const asyncRouter = [
     path: '/integralGift',
     component: Layout,
     name: '积分赠送管理',
-    icon: 'fenshu',
-    meta: { role: ['admin'] },
+    // icon: 'gift',
+    meta: {
+      title: '积分赠送管理',
+      icon: ['fas', 'gift'],
+      role: ['admin']
+    },
     children: [
       {
         path: 'index',
         component: Login,
         name: '积分赠送申请',
-        meta: { role: ['admin'] }
+        meta: {
+          title: '积分赠送申请',
+          role: ['admin']
+        }
       },
       {
-        path: 'duihuan',
+        path: 'auditing',
         component: Login,
         name: '积分赠送审核',
-        meta: { role: ['admin'] }
+        meta: {
+          title: '积分赠送审核',
+          role: ['admin']
+        }
       }
     ]
   }

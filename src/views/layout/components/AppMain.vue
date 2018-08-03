@@ -1,14 +1,15 @@
 <template>
-  <div class="menu">
-    <el-row>
-      <el-col :span="3">会员管理系统</el-col>
-    </el-row>
+  <div class="app-main">
+    app-main
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'menu',
+  name: 'appMain',
   data () {
     return {
       'msg': 'hello'

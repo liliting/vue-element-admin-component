@@ -1,17 +1,16 @@
 <template>
   <div class="app-container">
-    <sidebar class="sidebar-container"></sidebar>
-    <div class="main-container">
-      <navbar></navbar>
+    <sidebar class="sidebar-container" :class="{'opened':sidebar.opened}"></sidebar>
+    <div class="main-container" :class="{'opened':sidebar.opened}">
+      <navbar class="navbar"></navbar>
       <app-main></app-main>
     </div>
   </div>
 </template>
 
 <script>
-import Sidebar from './Sidebar.vue'
-import Navbar from './Navbar.vue'
-import AppMain from './AppMain.vue'
+import { mapGetters } from 'vuex'
+import { Sidebar, Navbar, AppMain } from './components'
 
 export default {
   name: 'login',
@@ -24,6 +23,14 @@ export default {
     Sidebar,
     Navbar,
     AppMain
+  },
+  computed: {
+    ...mapGetters([
+      'sidebar'
+    ])
+  },
+  created: function () {
+    console.log(this.sidebar)
   },
   methods: {
   }
@@ -38,10 +45,25 @@ body{
 }
 .app-container{
   height:100%;
+  overflow:hidden;
 }
 .sidebar-container{
-  width: 150px;
+  width: 201px;
   height: 100%;
   float: left;
+  position: absolute;
+  .opened{
+    width: 64px;
+  }
+}
+.main-container{
+  margin-left: 201px;
+  &.opened{
+    margin-left: 64px;
+  }
+}
+.navbar{
+  height: 50px;
+  border-bottom:1px solid #f1f1f1;
 }
 </style>

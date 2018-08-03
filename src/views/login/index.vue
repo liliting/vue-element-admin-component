@@ -26,10 +26,10 @@
         <div class="or-line"></div>
       </div>
       <el-form-item>
-        <el-input placeholder="用戶名" clearable="true" v-model="user"></el-input>
+        <el-input placeholder="用戶名" :clearable="clear" v-model="user"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-input placeholder="密碼" type="password" clearable="true" v-model="password"></el-input>
+        <el-input placeholder="密碼" type="password" :clearable="clear" v-model="password"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button class="btn" type="primary" @click="login">登陸</el-button>
@@ -49,7 +49,8 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       user: '',
-      password: ''
+      password: '',
+      clear: true
     }
   },
   methods: {

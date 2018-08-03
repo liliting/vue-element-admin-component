@@ -22,4 +22,8 @@ body,html{
   color: #2c3e50;
   height: 100%;
 }
+.el-submenu__icon-arrow{
+  right: 12px;
+  margin-top: -4px;
+}
 </style>
