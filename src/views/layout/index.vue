@@ -63,7 +63,7 @@ body{
   }
 }
 .navbar{
-  height: 50px;
+  height: 53px;
   border-bottom:1px solid #f1f1f1;
 }
 </style>

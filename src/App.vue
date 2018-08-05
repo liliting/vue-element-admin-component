@@ -10,7 +10,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './styles/index';
 body,html{
   height: 100%;
 }

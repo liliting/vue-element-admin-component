@@ -23,6 +23,7 @@ export const constantRouterMap = [
       {
         path: 'index',
         component: Login,
+        name: '会员信息列表',
         meta: {
           title: '会员信息列表',
           role: [ 'admin' ]
@@ -48,25 +49,7 @@ export const constantRouterMap = [
         meta: {
           title: '积分增长规则',
           role: ['admin']
-        },
-        children: [
-          {
-            path: 'index',
-            component: Login,
-            meta: {
-              title: '会员信息列表',
-              role: [ 'admin' ]
-            }
-          },
-          {
-            path: 'ss',
-            component: Login,
-            meta: {
-              title: '会员信息列表',
-              role: [ 'admin' ]
-            }
-          }
-        ]
+        }
       },
       {
         path: 'exchange',
