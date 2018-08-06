@@ -21,25 +21,8 @@ const config = {
       },
       {
         type: 'sk-select',
-        field: 'channel',
-        name: '渠道',
-        enum: [
-          {
-            'key': 100,
-            'value': '官方'
-          },
-          {
-            'key': 102,
-            'value': '公众号'
-          }
-        ],
-        requestData: true,
-        requestUrl: 'channel/list'
-      },
-      {
-        type: 'sk-select',
         field: 'integral',
-        name: '积分',
+        name: '分数',
         enum: [
           {
             'key': '0-1000',
@@ -83,19 +66,7 @@ const config = {
         }
       },
       {
-        name: '会员权益',
-        callback: (rows) => {
-          console.log(rows)
-        }
-      },
-      {
-        name: '积分记录',
-        callback: (rows) => {
-          console.log(rows)
-        }
-      },
-      {
-        name: '兑换券',
+        name: '用户权益',
         callback: (rows) => {
           console.log(rows)
         }
@@ -117,11 +88,6 @@ const config = {
         name: '手机号',
         type: 'int',
         field: 'phone'
-      },
-      {
-        name: '渠道',
-        type: 'string',
-        field: 'channel'
       },
       {
         name: '操作',
