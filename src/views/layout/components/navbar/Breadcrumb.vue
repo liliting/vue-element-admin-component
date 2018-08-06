@@ -37,6 +37,6 @@ export default {
 
 <style lang="scss" scoped>
 .el-breadcrumb{
-  line-height: 60px;
+  line-height: 53px;
 }
 </style>

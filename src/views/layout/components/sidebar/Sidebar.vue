@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar-container">
-    <el-menu mode="vertical" :default-active="$route.path" :collapse="isCollapse" background-color="#444" text-color="#fff" active-text-color="#409eff">
+    <el-menu mode="vertical" :default-active="$route.path" :collapse="isCollapse" background-color="#222" text-color="#fff" active-text-color="#409EFF">
       <sidebar-item v-for="route in routers" :key="route.name" :item="route" :base-path="route.path"></sidebar-item>
     </el-menu>
   </div>

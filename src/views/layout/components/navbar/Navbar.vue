@@ -4,9 +4,8 @@
     <breadcrumb class="breadcrumb-container left"></breadcrumb>
     <div class="right">
       <el-dropdown trigger="click">
-        <span class="el-dropdown-link logo-container">
-          <img src="@/assets/4klogo.png" class="logo" width="100%" alt="4Klogo">
-          <span>4K花园会员管理系统</span>
+        <span class="el-dropdown-link">
+          <span>username</span>
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
@@ -56,12 +55,27 @@ export default {
   float: left;
   height: 53px;
   line-height: 53px;
+  margin-left: 10px;
 }
 .logo-container{
   height:53px;
   line-height: 53px;
+  display:inline-block;
 }
 .logo{
-  width: 53px;
+  width: 70px;
+  vertical-align: middle;
+  margin-top: -10px;
+}
+.right{
+  height:53px;
+  line-height: 53px;
+  margin-right:10px;
+}
+.logos{
+  display:inline-block;
+  line-height:53px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <el-form class="login-form" ref="loginForm">
-      <h2>系統登陸</h2>
+      <h2>4K花园会员管理系統登陸</h2>
       <span>第三方登录</span>
       <el-row type="flex" justify="space-around" class="svg-container">
           <el-col :span="4">

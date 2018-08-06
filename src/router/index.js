@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
 import Login from '@/views/login/Index'
 import Layout from '@/views/layout/Index'
 
@@ -22,7 +21,7 @@ export const constantRouterMap = [
     children: [
       {
         path: 'index',
-        component: Login,
+        component: () => import('@/pages/example/Example'),
         name: '会员信息列表',
         meta: {
           title: '会员信息列表',
