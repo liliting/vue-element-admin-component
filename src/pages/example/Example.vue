@@ -2,7 +2,7 @@
   <div class="login-container">
     <search :search="config.search"></search>
     <btn-group :actions="config.actions"></btn-group>
-    <list :list="config.list"></list>
+    <list :list="config.list" :dataList="tableData"></list>
   </div>
 </template>
 
@@ -24,7 +24,24 @@ export default {
   },
   data () {
     return {
-      config: null
+      config: null,
+      tableData: [
+        {
+          'userId': '20323213',
+          'phone': '23213213213',
+          'channel': '100'
+        },
+        {
+          'userId': '20323213',
+          'phone': '23213213213',
+          'channel': '102'
+        },
+        {
+          'userId': '20323213',
+          'phone': '23213213213',
+          'channel': '200'
+        }
+      ]
     }
   }
 }
