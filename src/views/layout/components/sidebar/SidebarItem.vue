@@ -1,13 +1,13 @@
-<template>
-  <div class="sidebarItem-container" v-if="!item.hidden&&item.children">
-    <router-link v-if="item.children.length <= 1" :to="item.path" :key="item.name+'-'+item.children[0].name" class="item-link">
+<!-- <template>-->
+  <template class="sidebarItem-container" v-if="!item.hidden&&item.children">
+    <router-link v-if="!item.hidden&&item.children&&item.children.length <= 1" :to="item.path" :key="item.name+'-'+item.children[0].name" class="item-link">
       <el-menu-item :index="item.path+'/'+item.children[0].path">
         <fa-icon :icon="item.meta.icon"></fa-icon>
         <span slot="title">{{item.children[0].meta.title}}</span>
       </el-menu-item>
     </router-link>
 
-    <el-submenu v-else :index="item.name+'/'+item.path">
+    <el-submenu v-else-if="!item.hidden" :index="item.name+'/'+item.path">
       <template slot="title">
         <fa-icon :icon="item.meta.icon"></fa-icon>
         <span slot="title">{{item.meta.title}}</span>
@@ -21,8 +21,8 @@
         </router-link>
       </template>
     </el-submenu>
-  </div>
-</template>
+  </template>
+<!--  </template> -->
 
 <script>
 export default {

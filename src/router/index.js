@@ -9,22 +9,44 @@ export const constantRouterMap = [
   {path: '/login', name: 'login', component: Login, hidden: true},
   {path: '/', name: 'layout', component: Layout, hidden: true, redirect: '/member'},
   {
+    path: '/dashboard',
+    component: Layout,
+    name: '首页',
+    hidden: false,
+    redirect: '/dashboard/index',
+    meta: {
+      title: 'Dashboard',
+      icon: ['fas', 'home']
+    },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/pages/dashboard/Index'),
+        name: 'Dashboard',
+        meta: {
+          title: 'dashboard',
+          role: [ 'admin' ]
+        }
+      }
+    ]
+  },
+  {
     path: '/member',
     component: Layout,
-    name: '会员信息',
+    name: '信息列表',
     hidden: false,
     redirect: '/member/index',
     meta: {
-      title: '会员信息',
+      title: '信息列表',
       icon: ['fas', 'users-cog']
     },
     children: [
       {
         path: 'index',
         component: () => import('@/pages/example/Example'),
-        name: '会员信息列表',
+        name: '信息列表',
         meta: {
-          title: '会员信息列表',
+          title: '信息列表',
           role: [ 'admin' ]
         }
       }

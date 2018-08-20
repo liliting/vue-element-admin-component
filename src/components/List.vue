@@ -1,8 +1,9 @@
 <template>
   <div class="list">
     <el-table :border="true" :data="dataList">
-      <el-table-column v-for="(item,index) in list.fields" :key="index" :label="item.name" :type="item.type" :prop="item.field">
-        <template v-if="item.isAction == true" slot-scope="scope" >
+      <el-table-column v-for="(item,index) in list.fields" :key="index" :label="item.name" :type="item.type" :prop="item.field"></el-table-column>
+      <el-table-column v-if="list.actions&&list.actions.length>0" label="操作">
+        <template slot-scope="scope" >
           <el-button-group>
             <el-button v-for="(btn,key) in list.actions" size="mini" :icon="btn.icon" v-on:click="btn.callback(scope)" :key="key">{{btn.name}}</el-button>
           </el-button-group>

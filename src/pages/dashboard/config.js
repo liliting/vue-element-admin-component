@@ -5,7 +5,7 @@ const config = {
       {
         type: 'datetime',
         field: 'time',
-        name: '时间',
+        name: '注册时间',
         dateType: 'daterange',
         format: 'yyyy-MM-dd'
       },
@@ -83,19 +83,19 @@ const config = {
         }
       },
       {
-        name: '删除',
+        name: '会员权益',
         callback: (rows) => {
           console.log(rows)
         }
       },
       {
-        name: '记录',
+        name: '积分记录',
         callback: (rows) => {
           console.log(rows)
         }
       },
       {
-        name: '兑换',
+        name: '兑换券',
         callback: (rows) => {
           console.log(rows)
         }
@@ -105,18 +105,33 @@ const config = {
       {
         name: '选择',
         field: 'userId',
-        type: 'selection'
+        type: 'selection',
+        isAction: false
       },
       {
         name: '用户ID',
         type: 'int',
         field: 'userId',
-        primaryKey: true
+        primaryKey: true,
+        isAction: false
       },
       {
         name: '手机号',
         type: 'int',
-        field: 'phone'
+        field: 'phone',
+        isAction: false
+      },
+      {
+        name: '渠道',
+        type: 'string',
+        field: 'channel',
+        isAction: false
+      },
+      {
+        name: '操作',
+        type: 'int',
+        field: 'userId',
+        isAction: true
       }
     ]
   }

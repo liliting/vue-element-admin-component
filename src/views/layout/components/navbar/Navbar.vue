@@ -2,12 +2,6 @@
   <div class="navbar clearfix">
     <collapse class="collapse-container left" :toggleClick="toggleSidebar" :isActive="sidebar.opened"></collapse>
     <breadcrumb class="breadcrumb-container left"></breadcrumb>
-    <div class="logo-container">
-      <div class="logos">
-        <img src="@/assets/4klogo.png" class="logo" width="100%" alt="4Klogo">
-      </div>
-      <h3 class="logos">4K花园会员管理系统</h3>
-    </div>
     <div class="right">
       <el-dropdown trigger="click">
         <span class="el-dropdown-link">
