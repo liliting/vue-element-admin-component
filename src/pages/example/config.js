@@ -21,23 +21,6 @@ const config = {
       },
       {
         type: 'sk-select',
-        field: 'channel',
-        name: '渠道',
-        enum: [
-          {
-            'key': 100,
-            'value': '官方'
-          },
-          {
-            'key': 102,
-            'value': '公众号'
-          }
-        ],
-        requestData: true,
-        requestUrl: 'channel/list'
-      },
-      {
-        type: 'sk-select',
         field: 'integral',
         name: '积分',
         enum: [
@@ -77,25 +60,21 @@ const config = {
     actions: [
       {
         name: '查看',
-        icon: 'el-icon-eye',
+        icon: 'el-icon-info',
         callback: (rows) => {
           console.log(rows)
         }
       },
       {
         name: '删除',
+        icon: 'el-icon-delete',
         callback: (rows) => {
           console.log(rows)
         }
       },
       {
         name: '记录',
-        callback: (rows) => {
-          console.log(rows)
-        }
-      },
-      {
-        name: '兑换',
+        icon: 'el-icon-tickets',
         callback: (rows) => {
           console.log(rows)
         }

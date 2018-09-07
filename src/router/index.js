@@ -7,7 +7,7 @@ Vue.use(Router)
 
 export const constantRouterMap = [
   {path: '/login', name: 'login', component: Login, hidden: true},
-  {path: '/', name: 'layout', component: Layout, hidden: true, redirect: '/member'},
+  {path: '/', name: 'layout', component: Layout, hidden: true, redirect: '/dashboard'},
   {
     path: '/dashboard',
     component: Layout,
@@ -24,18 +24,18 @@ export const constantRouterMap = [
         component: () => import('@/pages/dashboard/Index'),
         name: 'Dashboard',
         meta: {
-          title: 'dashboard',
+          title: '首頁',
           role: [ 'admin' ]
         }
       }
     ]
   },
   {
-    path: '/member',
+    path: '/info',
     component: Layout,
     name: '信息列表',
     hidden: false,
-    redirect: '/member/index',
+    redirect: '/info/index',
     meta: {
       title: '信息列表',
       icon: ['fas', 'users-cog']
@@ -53,12 +53,12 @@ export const constantRouterMap = [
     ]
   },
   {
-    path: '/integral',
+    path: '/table',
     component: Layout,
     name: '积分规则管理',
     hidden: false,
     meta: {
-      title: '积分规则管理',
+      title: 'Table列表',
       icon: 'bullhorn',
       role: ['admin']
     },
@@ -66,30 +66,39 @@ export const constantRouterMap = [
       {
         path: 'index',
         component: Login,
-        name: '积分增长规则',
+        name: 'list',
         meta: {
-          title: '积分增长规则',
+          title: '列表',
           role: ['admin']
         }
       },
       {
-        path: 'exchange',
+        path: 'inlineEdit',
         component: Login,
-        name: '积分兑换规则',
+        name: 'inlineEdit',
         meta: {
-          title: '积分兑换规则',
+          title: '行内編輯表格',
+          role: ['admin']
+        }
+      },
+      {
+        path: 'filter',
+        component: Login,
+        name: 'filter',
+        meta: {
+          title: '筛选表格列',
           role: ['admin']
         }
       }
     ]
   },
   {
-    path: '/integralGift',
+    path: '/tree',
     component: Layout,
-    name: '积分赠送管理',
+    name: 'Tree',
     hidden: false,
     meta: {
-      title: '积分赠送管理',
+      title: 'Tree',
       icon: ['fas', 'gift'],
       role: ['admin']
     },

@@ -27,4 +27,7 @@ body,html{
   right: 12px;
   margin-top: -4px;
 }
+.el-form.el-form--inline{
+  text-align: left;
+}
 </style>

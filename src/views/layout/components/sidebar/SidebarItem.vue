@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.item-links{
+.item-links,.item-link{
   text-decoration: none;
   display: block;
 }

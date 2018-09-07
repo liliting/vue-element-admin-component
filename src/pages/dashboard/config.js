@@ -21,23 +21,6 @@ const config = {
       },
       {
         type: 'sk-select',
-        field: 'channel',
-        name: '渠道',
-        enum: [
-          {
-            'key': 100,
-            'value': '官方'
-          },
-          {
-            'key': 102,
-            'value': '公众号'
-          }
-        ],
-        requestData: true,
-        requestUrl: 'channel/list'
-      },
-      {
-        type: 'sk-select',
         field: 'integral',
         name: '积分',
         enum: [

@@ -33,4 +33,5 @@ export default {
 .search{
   padding:20px;
 }
+
 </style>
