@@ -1,6 +1,6 @@
 <template>
   <el-form-item :label="field.name" v-if="!field.primaryKey">
-    <el-input v-model="field.value" :name="field.field"></el-input>
+    <el-input v-model="field.value" :placeholder="field.name" :name="field.field"></el-input>
   </el-form-item>
 </template>
 

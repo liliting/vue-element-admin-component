@@ -3,16 +3,9 @@ const config = {
     show: true,
     fields: [
       {
-        type: 'datetime',
-        field: 'time',
-        name: '时间',
-        dateType: 'daterange',
-        format: 'yyyy-MM-dd'
-      },
-      {
         type: 'sk-input',
         field: 'id',
-        name: 'ID'
+        name: '用户ID'
       },
       {
         type: 'sk-input',
@@ -22,17 +15,24 @@ const config = {
       {
         type: 'sk-select',
         field: 'integral',
-        name: '积分',
+        name: '状态',
         enum: [
           {
-            'key': '0-1000',
-            'value': '0-1000'
+            'key': '0',
+            'value': '不可用'
           },
           {
-            'key': '1000-10000',
-            'value': '1000-10000'
+            'key': '1',
+            'value': '可用'
           }
         ]
+      },
+      {
+        type: 'datetime',
+        field: 'time',
+        name: '时间',
+        dateType: 'daterange',
+        format: 'yyyy-MM-dd'
       }
     ]
   },

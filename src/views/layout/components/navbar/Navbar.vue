@@ -5,11 +5,13 @@
     <div class="right">
       <el-dropdown trigger="click">
         <span class="el-dropdown-link">
-          <span>username</span>
+          <span>{{username}}</span>
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item index="logout" class="text-center">退出</el-dropdown-item>
+          <el-dropdown-item index="logout" class="text-center">
+            <el-button type="text" v-on:click="logout">退出</el-button>
+          </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -33,12 +35,18 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'sidebar'
+      'sidebar',
+      'username'
     ])
   },
   methods: {
     toggleSidebar () {
       this.$store.dispatch('toggleSidebar')
+    },
+    logout () {
+      this.$store.dispatch('Logout').then(() => {
+        this.$router.push('/login')
+      })
     }
   }
 }

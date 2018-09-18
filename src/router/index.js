@@ -77,7 +77,7 @@ export const constantRouterMap = [
         component: Login,
         name: 'inlineEdit',
         meta: {
-          title: '行内編輯表格',
+          title: '行内编辑表格',
           role: ['admin']
         }
       },
@@ -106,18 +106,18 @@ export const constantRouterMap = [
       {
         path: 'index',
         component: Login,
-        name: '积分赠送申请',
+        name: 'tree',
         meta: {
-          title: '积分赠送申请',
+          title: '简单的树',
           role: ['admin']
         }
       },
       {
-        path: 'auditing',
+        path: 'edit',
         component: Login,
-        name: '积分赠送审核',
+        name: 'editTree',
         meta: {
-          title: '积分赠送审核',
+          title: '编辑',
           role: ['admin']
         }
       }

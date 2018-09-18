@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <el-form class="login-form" ref="loginForm">
+    <el-form class="login-form" ref="loginForm" :model="loginForm" :rules="rules">
       <h2>系統登陸</h2>
       <span>第三方登录</span>
       <el-row type="flex" justify="space-around" class="svg-container">
@@ -26,10 +26,10 @@
         <div class="or-line"></div>
       </div>
       <el-form-item>
-        <el-input placeholder="用戶名" :clearable="clear" v-model="user"></el-input>
+        <el-input placeholder="用戶名" :clearable="clear" v-model="loginForm.user"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-input placeholder="密碼" type="password" :clearable="clear" v-model="password"></el-input>
+        <el-input placeholder="密碼" type="password" :clearable="clear" v-model="loginForm.password"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button class="btn" type="primary" @click="login">登陸</el-button>
@@ -47,15 +47,32 @@ export default {
   name: 'login',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      user: '',
-      password: '',
+      loginForm: {
+        user: '',
+        password: ''
+      },
+      rules: {
+        user: [
+          {required: true, message: '请输入用户名', trigger: 'blur'}
+        ],
+        password: [
+          {required: true, message: '请输入密码', trigger: 'blur'}
+        ]
+      },
       clear: true
     }
   },
   methods: {
     login () {
-      console.log('login')
+      this.$refs['loginForm'].validate(valid => {
+        if (valid) {
+          this.$store.dispatch('Login', this.loginForm).then(() => {
+            this.$router.push('/')
+          })
+        } else {
+          return false
+        }
+      })
     }
   }
 }
