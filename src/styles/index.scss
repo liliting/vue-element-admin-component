@@ -1,3 +1,6 @@
+@import './variable.scss';
+@import './func.scss';
+
 .clearfix:after{
   content: "";
   display: block;
