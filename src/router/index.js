@@ -55,7 +55,7 @@ export const constantRouterMap = [
   {
     path: '/table',
     component: Layout,
-    name: '积分规则管理',
+    name: 'Table列表',
     hidden: false,
     meta: {
       title: 'Table列表',
