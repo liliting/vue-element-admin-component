@@ -1,7 +1,7 @@
 <template>
   <el-form-item :label="field.name" v-if="!field.primaryKey">
     <el-input
-      v-model="field.value"
+      v-model:value="field.value"
       :placeholder="field.name"
       :name="field.field"
     ></el-input>
@@ -24,6 +24,3 @@ export default {
   },
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>

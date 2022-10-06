@@ -1,13 +1,11 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import * as Vue from 'vue'
+import * as Vuex from 'vuex'
 import app from './modules/app'
 import pRouters from './modules/p_routers'
 import user from './modules/user'
 import getters from './getters'
 
-Vue.use(Vuex)
-
-const store = new Vuex.Store({
+const store = Vuex.createStore({
   modules: {
     app,
     pRouters,

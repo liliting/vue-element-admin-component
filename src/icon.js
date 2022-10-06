@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import * as Vue from 'vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -12,4 +12,4 @@ library.add(solid)
 library.add(regular)
 library.add(brands)
 
-Vue.component('fa-icon', FontAwesomeIcon)
+window.$vueApp.component('fa-icon', FontAwesomeIcon)

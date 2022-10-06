@@ -46,7 +46,7 @@
         <el-input
           placeholder="用戶名"
           :clearable="clear"
-          v-model="loginForm.user"
+          v-model:value="loginForm.user"
         ></el-input>
       </el-form-item>
       <el-form-item>
@@ -54,7 +54,7 @@
           placeholder="密碼"
           type="password"
           :clearable="clear"
-          v-model="loginForm.password"
+          v-model:value="loginForm.password"
         ></el-input>
       </el-form-item>
       <el-form-item>
@@ -100,8 +100,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss" scoped>
 body {
   background: #f1f1f1;
 }

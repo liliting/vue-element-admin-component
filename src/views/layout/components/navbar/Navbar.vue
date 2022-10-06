@@ -12,11 +12,13 @@
           <span>{{ username }}</span>
           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item index="logout" class="text-center">
-            <el-button type="text" v-on:click="logout">退出</el-button>
-          </el-dropdown-item>
-        </el-dropdown-menu>
+        <template v-slot:dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item index="logout" class="text-center">
+              <el-button type="text" v-on:click="logout">退出</el-button>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
       </el-dropdown>
     </div>
   </div>

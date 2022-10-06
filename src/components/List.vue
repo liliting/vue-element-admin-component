@@ -12,7 +12,7 @@
         v-if="list.actions && list.actions.length > 0"
         label="操作"
       >
-        <template slot-scope="scope">
+        <template v-slot="scope">
           <el-button-group>
             <el-button
               v-for="(btn, key) in list.actions"
@@ -58,7 +58,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .list {
   padding: 20px;

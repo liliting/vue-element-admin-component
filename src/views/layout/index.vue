@@ -37,8 +37,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss" scoped>
 body {
   background: #f1f1f1;
   height: 100%;

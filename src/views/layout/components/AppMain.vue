@@ -1,8 +1,10 @@
 <template>
   <div class="app-main">
-    <transition name="fade">
-      <router-view></router-view>
-    </transition>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -16,5 +18,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped></style>

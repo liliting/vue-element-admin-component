@@ -2,16 +2,16 @@
   <el-form-item :label="field.name">
     <el-date-picker
       :type="field.dateType"
-      v-model="field.value"
+      v-model:value="field.value"
       range-separator="至"
       start-placeholder="开始时间"
       end-placeholder="结束时间"
-      :value-format="field.datetime | time"
+      :value-format="time_filter(field.datetime)"
     ></el-date-picker>
   </el-form-item>
 </template>
+
 <script>
-// import { initFormData, timeFormat } from '@/utils/loader'
 export default {
   name: 'datetime',
   data() {
@@ -20,13 +20,11 @@ export default {
     }
   },
   props: ['field'],
-  filters: {
-    time: function (val) {
+  methods: {
+    time_filter: function (val) {
       return val
       // return timeFormat[val]
     },
-  },
-  methods: {
     getElementData() {
       var result = {}
       result[this.field.field] = this.field.value

@@ -1,9 +1,7 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import * as Vue from 'vue'
+import * as VueRouter from 'vue-router'
 import Login from '@/views/login/Index'
 import Layout from '@/views/layout/Index'
-
-Vue.use(Router)
 
 export const constantRouterMap = [
   { path: '/login', name: 'login', component: Login, hidden: true },
@@ -27,7 +25,9 @@ export const constantRouterMap = [
     children: [
       {
         path: 'index',
-        component: () => import('@/pages/dashboard/Index'),
+        component: Vue.defineAsyncComponent(
+          () => import('@/pages/dashboard/Index')
+        ),
         name: 'Dashboard',
         meta: {
           title: '首頁',
@@ -49,7 +49,9 @@ export const constantRouterMap = [
     children: [
       {
         path: 'index',
-        component: () => import('@/pages/example/Example'),
+        component: Vue.defineAsyncComponent(
+          () => import('@/pages/example/Example')
+        ),
         name: '信息列表',
         meta: {
           title: '信息列表',
@@ -131,10 +133,12 @@ export const constantRouterMap = [
   },
 ]
 
-export default new Router({
-  // mode: 'history'//隱藏#号，后端支持可开
-  scrollBehavior: () => ({ y: 0 }),
-  routes: constantRouterMap,
+export default VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(),
+  routes: constantRouterMap, // mode: 'history'//隱藏#号，后端支持可开
+  scrollBehavior: () => ({
+    top: 0,
+  }),
 })
 
 export const asyncRouter = [

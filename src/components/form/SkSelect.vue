@@ -1,6 +1,6 @@
 <template>
   <el-form-item :label="field.name">
-    <el-select v-model="field.value" :name="field.field">
+    <el-select v-model:value="field.value" :name="field.field">
       <el-option
         v-for="(item, key) in field.enum"
         :key="'option_' + key"
@@ -36,6 +36,3 @@ export default {
   },
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>

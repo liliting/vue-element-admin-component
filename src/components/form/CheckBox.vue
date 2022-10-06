@@ -1,6 +1,6 @@
 <template>
   <el-form-item :label="field.name">
-    <el-checkbox-group v-model="formData[field.field]">
+    <el-checkbox-group v-model:value="formData[field.field]">
       <el-checkbox
         v-for="(item, key) in field.map"
         :label="key"
@@ -11,6 +11,7 @@
     </el-checkbox-group>
   </el-form-item>
 </template>
+
 <script>
 export default {
   name: 'CheckBox',
