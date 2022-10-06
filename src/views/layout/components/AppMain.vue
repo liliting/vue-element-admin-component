@@ -9,14 +9,12 @@
 <script>
 export default {
   name: 'appMain',
-  data () {
+  data() {
     return {
-      'msg': 'hello'
+      msg: 'hello',
     }
-  }
+  },
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

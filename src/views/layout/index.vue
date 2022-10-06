@@ -1,7 +1,10 @@
 <template>
   <div class="app-container">
-    <sidebar class="sidebar-container" :class="{'opened':sidebar.opened}"></sidebar>
-    <div class="main-container" :class="{'opened':sidebar.opened}">
+    <sidebar
+      class="sidebar-container"
+      :class="{ opened: sidebar.opened }"
+    ></sidebar>
+    <div class="main-container" :class="{ opened: sidebar.opened }">
       <navbar class="navbar"></navbar>
       <app-main></app-main>
     </div>
@@ -14,56 +17,53 @@ import { Sidebar, Navbar, AppMain } from './components'
 
 export default {
   name: 'login',
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
     }
   },
   components: {
     Sidebar,
     Navbar,
-    AppMain
+    AppMain,
   },
   computed: {
-    ...mapGetters([
-      'sidebar'
-    ])
+    ...mapGetters(['sidebar']),
   },
   created: function () {
     console.log(this.sidebar)
   },
-  methods: {
-  }
+  methods: {},
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-body{
+body {
   background: #f1f1f1;
-  height:100%;
+  height: 100%;
 }
-.app-container{
-  height:100%;
-  overflow:hidden;
+.app-container {
+  height: 100%;
+  overflow: hidden;
 }
-.sidebar-container{
+.sidebar-container {
   width: 201px;
   height: 100%;
   float: left;
   position: absolute;
-  .opened{
+  .opened {
     width: 64px;
   }
 }
-.main-container{
+.main-container {
   margin-left: 201px;
-  &.opened{
+  &.opened {
     margin-left: 64px;
   }
 }
-.navbar{
+.navbar {
   height: 53px;
-  border-bottom:1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
 }
 </style>

@@ -16,38 +16,36 @@ export default {
   components: {
     Search,
     List,
-    BtnGroup
+    BtnGroup,
   },
-  created () {
+  created() {
     this.config = config
     console.log(config)
   },
-  data () {
+  data() {
     return {
       config: null,
       tableData: [
         {
-          'userId': '20323213',
-          'phone': '23213213213',
-          'channel': '100'
+          userId: '20323213',
+          phone: '23213213213',
+          channel: '100',
         },
         {
-          'userId': '20323213',
-          'phone': '23213213213',
-          'channel': '102'
+          userId: '20323213',
+          phone: '23213213213',
+          channel: '102',
         },
         {
-          'userId': '20323213',
-          'phone': '23213213213',
-          'channel': '200'
-        }
-      ]
+          userId: '20323213',
+          phone: '23213213213',
+          channel: '200',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

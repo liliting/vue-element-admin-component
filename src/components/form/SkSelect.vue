@@ -1,7 +1,12 @@
 <template>
   <el-form-item :label="field.name">
     <el-select v-model="field.value" :name="field.field">
-      <el-option v-for="(item,key) in field.enum" :key="'option_'+key" :label="item.value" :value="item.key"></el-option>
+      <el-option
+        v-for="(item, key) in field.enum"
+        :key="'option_' + key"
+        :label="item.value"
+        :value="item.key"
+      ></el-option>
     </el-select>
   </el-form-item>
 </template>
@@ -10,7 +15,7 @@
 // import { initFormData } from '@/utils/loader';
 export default {
   name: 'SkSelect',
-  data () {
+  data() {
     return {
       // formData: initFormData(this.field.field, this.field.value)
     }
@@ -20,19 +25,17 @@ export default {
     // console.log( this.formData )
   },
   methods: {
-    checkElementLegal () {
+    checkElementLegal() {
       // return this.formData[this.field.field] != ''
     },
-    getElementData () {
+    getElementData() {
       var result = {}
       result[this.field.field] = this.field.value
       return result
-    }
-  }
+    },
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -7,17 +7,17 @@ const config = {
         field: 'time',
         name: '注册时间',
         dateType: 'daterange',
-        format: 'yyyy-MM-dd'
+        format: 'yyyy-MM-dd',
       },
       {
         type: 'sk-input',
         field: 'id',
-        name: 'ID'
+        name: 'ID',
       },
       {
         type: 'sk-input',
         field: 'phone',
-        name: '手机号'
+        name: '手机号',
       },
       {
         type: 'sk-select',
@@ -25,16 +25,16 @@ const config = {
         name: '积分',
         enum: [
           {
-            'key': '0-1000',
-            'value': '0-1000'
+            key: '0-1000',
+            value: '0-1000',
           },
           {
-            'key': '1000-10000',
-            'value': '1000-10000'
-          }
-        ]
-      }
-    ]
+            key: '1000-10000',
+            value: '1000-10000',
+          },
+        ],
+      },
+    ],
   },
   actions: [
     {
@@ -44,7 +44,7 @@ const config = {
       callback: () => {
         console.log(this)
         console.log('it is callback')
-      }
+      },
     },
     {
       type: 'warning',
@@ -53,8 +53,8 @@ const config = {
       callback: () => {
         console.log(this)
         console.log('it is 删除 callback')
-      }
-    }
+      },
+    },
   ],
   list: {
     actions: [
@@ -63,61 +63,61 @@ const config = {
         icon: 'el-icon-eye',
         callback: (rows) => {
           console.log(rows)
-        }
+        },
       },
       {
         name: '会员权益',
         callback: (rows) => {
           console.log(rows)
-        }
+        },
       },
       {
         name: '积分记录',
         callback: (rows) => {
           console.log(rows)
-        }
+        },
       },
       {
         name: '兑换券',
         callback: (rows) => {
           console.log(rows)
-        }
-      }
+        },
+      },
     ],
     fields: [
       {
         name: '选择',
         field: 'userId',
         type: 'selection',
-        isAction: false
+        isAction: false,
       },
       {
         name: '用户ID',
         type: 'int',
         field: 'userId',
         primaryKey: true,
-        isAction: false
+        isAction: false,
       },
       {
         name: '手机号',
         type: 'int',
         field: 'phone',
-        isAction: false
+        isAction: false,
       },
       {
         name: '渠道',
         type: 'string',
         field: 'channel',
-        isAction: false
+        isAction: false,
       },
       {
         name: '操作',
         type: 'int',
         field: 'userId',
-        isAction: true
-      }
-    ]
-  }
+        isAction: true,
+      },
+    ],
+  },
 }
 
 export default config

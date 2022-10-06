@@ -11,9 +11,9 @@ const store = new Vuex.Store({
   modules: {
     app,
     pRouters,
-    user
+    user,
   },
-  getters
+  getters,
 })
 
 export default store

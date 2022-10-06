@@ -1,37 +1,42 @@
 <template>
   <div class="collapse">
-    <fa-icon class="icon" @click="toggleClick" :class="{'isCollapse':isActive}" :icon="'bars'"></fa-icon>
+    <fa-icon
+      class="icon"
+      @click="toggleClick"
+      :class="{ isCollapse: isActive }"
+      :icon="'bars'"
+    ></fa-icon>
   </div>
 </template>
 
 <script>
 export default {
   name: 'collapse',
-  data () {
+  data() {
     return {
-      'msg': 'hello'
+      msg: 'hello',
     }
   },
   props: {
     isActive: {
       type: Boolean,
-      default: false
+      default: false,
     },
     toggleClick: {
       type: Function,
-      default: null
-    }
-  }
+      default: null,
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.icon{
+.icon {
   height: 2em;
   font-size: 1.5em;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   cursor: pointer;
-  &.isCollapse{
+  &.isCollapse {
     transform: rotate(-90deg);
   }
 }

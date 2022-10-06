@@ -6,8 +6,14 @@ import Layout from '@/views/layout/Index'
 Vue.use(Router)
 
 export const constantRouterMap = [
-  {path: '/login', name: 'login', component: Login, hidden: true},
-  {path: '/', name: 'layout', component: Layout, hidden: true, redirect: '/dashboard'},
+  { path: '/login', name: 'login', component: Login, hidden: true },
+  {
+    path: '/',
+    name: 'layout',
+    component: Layout,
+    hidden: true,
+    redirect: '/dashboard',
+  },
   {
     path: '/dashboard',
     component: Layout,
@@ -16,7 +22,7 @@ export const constantRouterMap = [
     redirect: '/dashboard/index',
     meta: {
       title: 'Dashboard',
-      icon: ['fas', 'home']
+      icon: ['fas', 'home'],
     },
     children: [
       {
@@ -25,10 +31,10 @@ export const constantRouterMap = [
         name: 'Dashboard',
         meta: {
           title: '首頁',
-          role: [ 'admin' ]
-        }
-      }
-    ]
+          role: ['admin'],
+        },
+      },
+    ],
   },
   {
     path: '/info',
@@ -38,7 +44,7 @@ export const constantRouterMap = [
     redirect: '/info/index',
     meta: {
       title: '信息列表',
-      icon: ['fas', 'users-cog']
+      icon: ['fas', 'users-cog'],
     },
     children: [
       {
@@ -47,10 +53,10 @@ export const constantRouterMap = [
         name: '信息列表',
         meta: {
           title: '信息列表',
-          role: [ 'admin' ]
-        }
-      }
-    ]
+          role: ['admin'],
+        },
+      },
+    ],
   },
   {
     path: '/table',
@@ -60,7 +66,7 @@ export const constantRouterMap = [
     meta: {
       title: 'Table列表',
       icon: 'bullhorn',
-      role: ['admin']
+      role: ['admin'],
     },
     children: [
       {
@@ -69,8 +75,8 @@ export const constantRouterMap = [
         name: 'list',
         meta: {
           title: '列表',
-          role: ['admin']
-        }
+          role: ['admin'],
+        },
       },
       {
         path: 'inlineEdit',
@@ -78,8 +84,8 @@ export const constantRouterMap = [
         name: 'inlineEdit',
         meta: {
           title: '行内编辑表格',
-          role: ['admin']
-        }
+          role: ['admin'],
+        },
       },
       {
         path: 'filter',
@@ -87,10 +93,10 @@ export const constantRouterMap = [
         name: 'filter',
         meta: {
           title: '筛选表格列',
-          role: ['admin']
-        }
-      }
-    ]
+          role: ['admin'],
+        },
+      },
+    ],
   },
   {
     path: '/tree',
@@ -100,7 +106,7 @@ export const constantRouterMap = [
     meta: {
       title: 'Tree',
       icon: ['fas', 'gift'],
-      role: ['admin']
+      role: ['admin'],
     },
     children: [
       {
@@ -109,8 +115,8 @@ export const constantRouterMap = [
         name: 'tree',
         meta: {
           title: '简单的树',
-          role: ['admin']
-        }
+          role: ['admin'],
+        },
       },
       {
         path: 'edit',
@@ -118,17 +124,17 @@ export const constantRouterMap = [
         name: 'editTree',
         meta: {
           title: '编辑',
-          role: ['admin']
-        }
-      }
-    ]
-  }
+          role: ['admin'],
+        },
+      },
+    ],
+  },
 ]
 
 export default new Router({
   // mode: 'history'//隱藏#号，后端支持可开
   scrollBehavior: () => ({ y: 0 }),
-  routes: constantRouterMap
+  routes: constantRouterMap,
 })
 
 export const asyncRouter = [
@@ -139,7 +145,7 @@ export const asyncRouter = [
     hidden: false,
     meta: {
       title: '会员信息',
-      icon: ['fas', 'users-cog']
+      icon: ['fas', 'users-cog'],
     },
     redirect: '/member/index',
     children: [
@@ -148,10 +154,10 @@ export const asyncRouter = [
         component: Login,
         meta: {
           title: '会员信息列表',
-          role: [ 'admin' ]
-        }
-      }
-    ]
+          role: ['admin'],
+        },
+      },
+    ],
   },
   {
     path: '/integral',
@@ -161,7 +167,7 @@ export const asyncRouter = [
     meta: {
       title: '积分规则管理',
       icon: 'bullhorn',
-      role: ['admin']
+      role: ['admin'],
     },
     children: [
       {
@@ -170,8 +176,8 @@ export const asyncRouter = [
         name: '积分增长规则',
         meta: {
           title: '积分增长规则',
-          role: ['admin']
-        }
+          role: ['admin'],
+        },
       },
       {
         path: 'exchange',
@@ -179,10 +185,10 @@ export const asyncRouter = [
         name: '积分兑换规则',
         meta: {
           title: '积分兑换规则',
-          role: ['admin']
-        }
-      }
-    ]
+          role: ['admin'],
+        },
+      },
+    ],
   },
   {
     path: '/integralGift',
@@ -192,7 +198,7 @@ export const asyncRouter = [
     meta: {
       title: '积分赠送管理',
       icon: ['fas', 'gift'],
-      role: ['admin']
+      role: ['admin'],
     },
     children: [
       {
@@ -201,8 +207,8 @@ export const asyncRouter = [
         name: '积分赠送申请',
         meta: {
           title: '积分赠送申请',
-          role: ['admin']
-        }
+          role: ['admin'],
+        },
       },
       {
         path: 'auditing',
@@ -210,9 +216,9 @@ export const asyncRouter = [
         name: '积分赠送审核',
         meta: {
           title: '积分赠送审核',
-          role: ['admin']
-        }
-      }
-    ]
-  }
+          role: ['admin'],
+        },
+      },
+    ],
+  },
 ]

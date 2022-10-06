@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
 
 <style lang="scss">
 @import './styles/index';
-body,html{
+body,
+html {
   height: 100%;
 }
 #app {
@@ -23,11 +24,11 @@ body,html{
   color: #2c3e50;
   height: 100%;
 }
-.el-submenu__icon-arrow{
+.el-submenu__icon-arrow {
   right: 12px;
   margin-top: -4px;
 }
-.el-form.el-form--inline{
+.el-form.el-form--inline {
   text-align: left;
 }
 </style>

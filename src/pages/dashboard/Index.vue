@@ -21,21 +21,21 @@
 import config from './config'
 export default {
   name: 'example',
-  created () {
+  created() {
     this.config = config
     console.log(config)
   },
-  data () {
+  data() {
     return {
-      config: null
+      config: null,
     }
-  }
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.login-container{
-  padding:20px;
+.login-container {
+  padding: 20px;
 }
 </style>

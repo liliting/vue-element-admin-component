@@ -1,7 +1,13 @@
 <template>
   <div class="search">
     <el-form ref="form" :inline="true">
-      <component :is="item.type" :field="item" v-for="(item,index) in search.fields" :key="index">组件初始化失败</component>
+      <component
+        :is="item.type"
+        :field="item"
+        v-for="(item, index) in search.fields"
+        :key="index"
+        >组件初始化失败</component
+      >
       <el-form-item>
         <el-button type="primary">提交</el-button>
       </el-form-item>
@@ -17,21 +23,20 @@ export default {
     CheckBox,
     Datetime,
     SkInput,
-    SkSelect
+    SkSelect,
   },
-  props: [ 'search' ],
-  data () {
+  props: ['search'],
+  data() {
     return {
-      msg: ''
+      msg: '',
     }
-  }
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.search{
-  padding:20px;
+.search {
+  padding: 20px;
 }
-
 </style>
