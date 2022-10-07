@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Message } from 'element-ui'
+import { ElMessage as Message } from 'element-plus'
 
 const service = axios.create({
   baseURL: '',

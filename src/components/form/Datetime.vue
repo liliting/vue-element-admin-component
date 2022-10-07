@@ -2,7 +2,7 @@
   <el-form-item :label="field.name">
     <el-date-picker
       :type="field.dateType"
-      v-model:value="field.value"
+      v-model="field.value"
       range-separator="至"
       start-placeholder="开始时间"
       end-placeholder="结束时间"

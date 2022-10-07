@@ -12,7 +12,7 @@
     </el-menu-item>
   </router-link>
 
-  <el-submenu v-else-if="!item.hidden" :index="item.name + '/' + item.path">
+  <el-sub-menu v-else-if="!item.hidden" :index="item.name + '/' + item.path">
     <template v-slot:title>
       <fa-icon :icon="item.meta.icon"></fa-icon>
       <template v-slot:title>
@@ -33,7 +33,7 @@
         </el-menu-item>
       </router-link>
     </template>
-  </el-submenu>
+  </el-sub-menu>
 </template>
 
 <script>

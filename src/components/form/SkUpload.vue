@@ -2,13 +2,17 @@
   <el-form-item :label="field.name" v-if="!field.primaryKey">
     <el-upload class="avator-upload" action="">
       <img v-if="imgUrl" :src="imgUrl" alt="img" class="avatar" />
-      <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+      <el-icon class="avatar-uploader-icon"><el-icon-plus /></el-icon>
     </el-upload>
   </el-form-item>
 </template>
 
 <script>
+import { Plus as ElIconPlus } from '@element-plus/icons'
 export default {
+  components: {
+    ElIconPlus,
+  },
   name: 'SkInput',
   props: ['field'],
   data() {

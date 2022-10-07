@@ -46,7 +46,7 @@
         <el-input
           placeholder="用戶名"
           :clearable="clear"
-          v-model:value="loginForm.user"
+          v-model="loginForm.user"
         ></el-input>
       </el-form-item>
       <el-form-item>
@@ -54,7 +54,7 @@
           placeholder="密碼"
           type="password"
           :clearable="clear"
-          v-model:value="loginForm.password"
+          v-model="loginForm.password"
         ></el-input>
       </el-form-item>
       <el-form-item>

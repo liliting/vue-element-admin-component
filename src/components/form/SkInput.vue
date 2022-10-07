@@ -1,7 +1,7 @@
 <template>
   <el-form-item :label="field.name" v-if="!field.primaryKey">
     <el-input
-      v-model:value="field.value"
+      v-model="field.value"
       :placeholder="field.name"
       :name="field.field"
     ></el-input>

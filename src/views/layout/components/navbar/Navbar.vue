@@ -10,7 +10,7 @@
       <el-dropdown trigger="click">
         <span class="el-dropdown-link">
           <span>{{ username }}</span>
-          <i class="el-icon-arrow-down el-icon--right"></i>
+          <el-icon class="el-icon--right"><el-icon-arrow-down /></el-icon>
         </span>
         <template v-slot:dropdown>
           <el-dropdown-menu>
@@ -25,15 +25,17 @@
 </template>
 
 <script>
+import { ArrowDown as ElIconArrowDown } from '@element-plus/icons'
 import { mapGetters } from 'vuex'
 import Collapse from './Collapse'
 import Breadcrumb from './Breadcrumb'
 export default {
-  name: 'navbar',
   components: {
     Collapse,
     Breadcrumb,
+    ElIconArrowDown,
   },
+  name: 'navbar',
   data() {
     return {
       msg: 'hello',
